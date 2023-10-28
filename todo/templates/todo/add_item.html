@@ -11,7 +11,12 @@
     <h1>Add to do item:</h1>
     <form method="POST" action="add">
         {% csrf_token %}
-        <div>
+        {{ form.as_p }}
+        <!-- also available form.as_table -->
+        <!-- as we created form template in forms.py, and added it in view to redner,
+        we will not need below commented out code, as we render form from forms.py
+        with the code above -->
+        <!-- <div>
             <p>
                 <label for="id_name">Name:</label>
                 <input type="text" id="id_name" name="item_name">
@@ -22,7 +27,7 @@
                 <label for="id_done">Done:</label>
                 <input type="checkbox" id="id_done" name="done">
             </p>
-        </div>
+        </div> -->
         <div>
             <p>
                 <button type="submit">Add Item</button>
