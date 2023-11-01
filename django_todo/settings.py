@@ -32,8 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-obione84-dijangopractic-h4gnz7h6tat.ws-eu105.gitpod.io',
-    'szy1984-django-todo-app-6b2c5866811e.herokuapp.com',
+    os.environ.get('GITPOD_HOSTNAME'),
     os.environ.get('HEROKU_HOSTNAME')
     ]
 
